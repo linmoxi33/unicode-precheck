@@ -1,0 +1,6 @@
+unicode-precheck reproduces, for the purpose of offline auditing, four normalization
+constants/regular expressions from NVIDIA/auto-ontology
+(https://github.com/NVIDIA/auto-ontology), Copyright (c) 2026 NVIDIA CORPORATION &
+AFFILIATES, licensed under the Apache License 2.0. No upstream source file is vendored;
+each mirrored routine cites its upstream file:line. Upstream commit audited:
+22e22c894df8cde7a78f854ea40476a8577e9a3d.

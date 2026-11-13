@@ -1,0 +1,295 @@
+{
+  "findings": [
+    {
+      "evidence": "auto_ontology/semantic/deterministic.py:51",
+      "identifier": "顧客マスタ",
+      "kind": "term_name_collapse",
+      "message": "fallback Term name is empty; semantic compilation stores \"\" and the embedding pass skips the Term",
+      "rule": "U001",
+      "severity": "high",
+      "suggested_ascii_alias": "",
+      "suggested_term": "顧客マスタ",
+      "where": "examples/in/erp.sql:顧客マスタ",
+      "witness": {
+        "codepoints": [
+          "U+9867"
+        ],
+        "length": 1,
+        "names": [
+          "CJK UNIFIED IDEOGRAPH-9867"
+        ],
+        "substring": "顧"
+      }
+    },
+    {
+      "evidence": "auto_ontology/pii_detection/rules.py:18",
+      "identifier": "電話番号",
+      "kind": "pii_normalize_collapse",
+      "message": "PII rule normalizer emits \"\"; rules return REVIEW \"Column name is empty\" with source=rules, so the column is marked processed and the LLM classifier never sees it",
+      "rule": "U003",
+      "severity": "high",
+      "suggested_ascii_alias": "",
+      "where": "examples/in/erp.sql:顧客マスタ.電話番号",
+      "witness": {
+        "codepoints": [
+          "U+96FB"
+        ],
+        "length": 1,
+        "names": [
+          "CJK UNIFIED IDEOGRAPH-96FB"
+        ],
+        "substring": "電"
+      }
+    },
+    {
+      "evidence": "auto_ontology/dal/search.py:228",
+      "identifier": "電話番号",
+      "kind": "synonym_token_collapse",
+      "message": "synonym tokenizer [a-z0-9]+ yields []; a search for this term can never whole-word match a synonym",
+      "rule": "U005",
+      "severity": "medium",
+      "suggested_ascii_alias": "",
+      "where": "examples/in/erp.sql:顧客マスタ.電話番号",
+      "witness": {
+        "codepoints": [
+          "U+96FB"
+        ],
+        "length": 1,
+        "names": [
+          "CJK UNIFIED IDEOGRAPH-96FB"
+        ],
+        "substring": "電"
+      }
+    },
+    {
+      "evidence": "auto_ontology/pii_detection/rules.py:18",
+      "identifier": "住所",
+      "kind": "pii_normalize_collapse",
+      "message": "PII rule normalizer emits \"\"; rules return REVIEW \"Column name is empty\" with source=rules, so the column is marked processed and the LLM classifier never sees it",
+      "rule": "U003",
+      "severity": "high",
+      "suggested_ascii_alias": "",
+      "where": "examples/in/erp.sql:顧客マスタ.住所",
+      "witness": {
+        "codepoints": [
+          "U+4F4F"
+        ],
+        "length": 1,
+        "names": [
+          "CJK UNIFIED IDEOGRAPH-4F4F"
+        ],
+        "substring": "住"
+      }
+    },
+    {
+      "evidence": "auto_ontology/dal/search.py:228",
+      "identifier": "住所",
+      "kind": "synonym_token_collapse",
+      "message": "synonym tokenizer [a-z0-9]+ yields []; a search for this term can never whole-word match a synonym",
+      "rule": "U005",
+      "severity": "medium",
+      "suggested_ascii_alias": "",
+      "where": "examples/in/erp.sql:顧客マスタ.住所",
+      "witness": {
+        "codepoints": [
+          "U+4F4F"
+        ],
+        "length": 1,
+        "names": [
+          "CJK UNIFIED IDEOGRAPH-4F4F"
+        ],
+        "substring": "住"
+      }
+    },
+    {
+      "evidence": "auto_ontology/semantic/deterministic.py:51",
+      "identifier": "주문_내역",
+      "kind": "term_name_collapse",
+      "message": "fallback Term name is empty; semantic compilation stores \"\" and the embedding pass skips the Term",
+      "rule": "U001",
+      "severity": "high",
+      "suggested_ascii_alias": "",
+      "suggested_term": "주문_내역",
+      "where": "examples/in/erp.sql:주문_내역",
+      "witness": {
+        "codepoints": [
+          "U+C8FC"
+        ],
+        "length": 1,
+        "names": [
+          "HANGUL SYLLABLE JU"
+        ],
+        "substring": "주"
+      }
+    },
+    {
+      "evidence": "auto_ontology/pii_detection/rules.py:18",
+      "identifier": "주문번호",
+      "kind": "pii_normalize_collapse",
+      "message": "PII rule normalizer emits \"\"; rules return REVIEW \"Column name is empty\" with source=rules, so the column is marked processed and the LLM classifier never sees it",
+      "rule": "U003",
+      "severity": "high",
+      "suggested_ascii_alias": "",
+      "where": "examples/in/erp.sql:주문_내역.주문번호",
+      "witness": {
+        "codepoints": [
+          "U+C8FC"
+        ],
+        "length": 1,
+        "names": [
+          "HANGUL SYLLABLE JU"
+        ],
+        "substring": "주"
+      }
+    },
+    {
+      "evidence": "auto_ontology/dal/search.py:228",
+      "identifier": "주문번호",
+      "kind": "synonym_token_collapse",
+      "message": "synonym tokenizer [a-z0-9]+ yields []; a search for this term can never whole-word match a synonym",
+      "rule": "U005",
+      "severity": "medium",
+      "suggested_ascii_alias": "",
+      "where": "examples/in/erp.sql:주문_내역.주문번호",
+      "witness": {
+        "codepoints": [
+          "U+C8FC"
+        ],
+        "length": 1,
+        "names": [
+          "HANGUL SYLLABLE JU"
+        ],
+        "substring": "주"
+      }
+    },
+    {
+      "evidence": "auto_ontology/pii_detection/rules.py:18",
+      "identifier": "주민등록번호",
+      "kind": "pii_normalize_collapse",
+      "message": "PII rule normalizer emits \"\"; rules return REVIEW \"Column name is empty\" with source=rules, so the column is marked processed and the LLM classifier never sees it",
+      "rule": "U003",
+      "severity": "high",
+      "suggested_ascii_alias": "",
+      "where": "examples/in/erp.sql:주문_내역.주민등록번호",
+      "witness": {
+        "codepoints": [
+          "U+C8FC"
+        ],
+        "length": 1,
+        "names": [
+          "HANGUL SYLLABLE JU"
+        ],
+        "substring": "주"
+      }
+    },
+    {
+      "evidence": "auto_ontology/dal/search.py:228",
+      "identifier": "주민등록번호",
+      "kind": "synonym_token_collapse",
+      "message": "synonym tokenizer [a-z0-9]+ yields []; a search for this term can never whole-word match a synonym",
+      "rule": "U005",
+      "severity": "medium",
+      "suggested_ascii_alias": "",
+      "where": "examples/in/erp.sql:주문_내역.주민등록번호",
+      "witness": {
+        "codepoints": [
+          "U+C8FC"
+        ],
+        "length": 1,
+        "names": [
+          "HANGUL SYLLABLE JU"
+        ],
+        "substring": "주"
+      }
+    },
+    {
+      "evidence": "auto_ontology/semantic/deterministic.py:51",
+      "identifier": "Société",
+      "kind": "term_name_fragment",
+      "message": "fallback Term name 'Soci T' is not a faithful rendering of the identifier (accented letters are split, not transliterated)",
+      "rendered": "Soci T",
+      "rule": "U002",
+      "severity": "medium",
+      "suggested_ascii_alias": "societe",
+      "where": "examples/in/erp.sql:Société",
+      "witness": {
+        "codepoints": [
+          "U+00E9"
+        ],
+        "length": 1,
+        "names": [
+          "LATIN SMALL LETTER E WITH ACUTE"
+        ],
+        "substring": "é"
+      }
+    },
+    {
+      "evidence": "auto_ontology/pii_detection/rules.py:18",
+      "identifier": "téléphone",
+      "kind": "pii_normalize_fragment",
+      "message": "PII rule normalizer splits the accented word into 't l phone' instead of 'telephone'",
+      "normalized": "t l phone",
+      "rule": "U002",
+      "severity": "medium",
+      "suggested_ascii_alias": "telephone",
+      "where": "examples/in/erp.sql:Société.téléphone",
+      "witness": {
+        "codepoints": [
+          "U+00E9"
+        ],
+        "length": 1,
+        "names": [
+          "LATIN SMALL LETTER E WITH ACUTE"
+        ],
+        "substring": "é"
+      }
+    },
+    {
+      "evidence": "auto_ontology/semantic/date_format.py:39",
+      "identifier": "date_facture",
+      "kind": "date_format_unclaimed",
+      "message": "none of the 23 upstream date candidates parses every sample; the column gets no format hint and SQL can run yet match nothing",
+      "rule": "U006",
+      "samples": [
+        "2024.03.15",
+        "2024.04.02",
+        "2024년 3월 15일"
+      ],
+      "severity": "medium",
+      "where": "examples/in/fr_dates.sql:factures.date_facture"
+    }
+  ],
+  "inputs": [
+    "examples/in/erp.sql",
+    "examples/in/fr_dates.sql"
+  ],
+  "rules": {
+    "U001": "fallback Term name collapses to empty (#468)",
+    "U002": "normalizer fragments an accented word (#468/#469)",
+    "U003": "PII normalizer collapses and silently marks the column processed (#469)",
+    "U005": "synonym tokenizer yields no tokens (#472)",
+    "U006": "no upstream date candidate parses the samples (#473)"
+  },
+  "summary": {
+    "by_rule": {
+      "U001": 2,
+      "U002": 2,
+      "U003": 4,
+      "U005": 4,
+      "U006": 1
+    },
+    "by_severity": {
+      "high": 6,
+      "medium": 7
+    },
+    "columns": 12,
+    "fail_on": "low",
+    "findings": 13,
+    "tables": 5,
+    "tripped": 13
+  },
+  "tool": "unicode-precheck",
+  "upstream": "NVIDIA/auto-ontology",
+  "upstream_commit": "22e22c894df8cde7a78f854ea40476a8577e9a3d",
+  "version": "0.1.0"
+}
